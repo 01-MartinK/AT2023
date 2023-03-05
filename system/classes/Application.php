@@ -1,5 +1,7 @@
 <?php namespace Halo;
 
+error_reporting(E_ALL);
+
 /**
  * Created by PhpStorm.
  * User: henno
@@ -19,7 +21,8 @@ class Application
 
         $this->set_base_url();
 
-        // Redirect to HTTPS
+//        echo BASE_URL;
+	// Redirect to HTTPS
         if ($cfg['FORCE_HTTPS'] && $this->https_is_off()) {
             $this->redirect_to_https();
         }
@@ -27,12 +30,16 @@ class Application
         session_start();
         ob_start();
 
+
         $this->set_language();
-        $this->process_uri();
+//echo 'ddd';        
+$this->process_uri();
+//echo 'fff';
         $this->init_db();
+//echo 'eee';
         $this->handle_routing();
         $this->auth = new Auth();
-
+	
 
         // Instantiate controller
         $controller_fqn = '\Halo\\' . $this->controller;
@@ -98,6 +105,8 @@ class Application
 
             // Save current url, in case the action redirects to login
             $this->save_current_url_to_session($controller);
+		//echo 'bbb';
+		//print_r($controller);
 
             $controller->{$controller->action}();
             $controller->render($controller->template);

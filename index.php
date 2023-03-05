@@ -9,6 +9,7 @@ if (!@include_once("vendor/autoload.php")) {
 
 }
 
+
 include __DIR__ . '/system/functions.php';
 
 // Load config
@@ -24,6 +25,8 @@ define('PROJECT_NAME', 'Aastategija | Administratsioon');
 define('PROJECT_NATIVE_LANGUAGE', 'en');
 define('DEFAULT_CONTROLLER', 'welcome');
 
+
 // Load app
 require 'system/classes/Application.php';
 $app = new Application;
+

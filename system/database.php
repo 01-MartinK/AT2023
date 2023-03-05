@@ -7,9 +7,11 @@
 connect_db();
 function connect_db()
 {
+//	echo 'database';
     global $db;
     global $cfg;
     @$db = new mysqli($cfg['DATABASE_HOSTNAME'], $cfg['DATABASE_USERNAME'], $cfg['DATABASE_PASSWORD']);
+
     if ($connection_error = mysqli_connect_error()) {
         $errors[] = 'There was an error trying to connect to database at ' . $cfg['DATABASE_HOSTNAME'] . ':<br><b>' . $connection_error . '</b>';
         require 'templates/error_template.php';
