@@ -42,15 +42,15 @@ ___________              __           ____  __.___ ___  ____  __.
                \/                            \/     \/         \/
 ###################################################################### -->
 
-<nav class="navbar navbar-default">
+<nav class="navbar">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a href="http://voco.ee/" target="_blank"><img id="khk-logo" src="images/khk_logo.png" alt="logo"/></a>
+            <a href="http://voco.ee/" target="_blank"><img id="voco-logo" src="https://voco.ee/wp-content/uploads/VOCO-Logo.svg" alt="logo"/></a>
         </div>
-        <div class="navbar-form navbar-right">
+        <div class="">
             <?php if (isset($_SESSION['user_id'])): ?>
-                <h4><?= $_SESSION['name'] . ', ' . $_SESSION['social_id'] ?></h4>
+                <h4 class="navbar-info"><?= $_SESSION['name'] . ', ' . $_SESSION['social_id'] ?></h4>
             <?php endif; ?>
         </div>
     </div>
@@ -66,22 +66,23 @@ ___________              __           ____  __.___ ___  ____  __.
 <script src="assets/js/main.js"></script>
 
 <footer>
-    <div class="col-md-3 footer-block">
-        <img id="khk-logo" src="images/voco_logo.png" alt="logo"/>
+    <div class="col-md-2 footer-block">
+        <a class="footer-text" href="https://voco.ee"><img id="footer-logo" src="images/VOCO.svg" alt="logo"/></a>
     </div>
-    <div class="col-md-3 footer-block">
-        <span>Tartu Rakenduslik Kolledž</span><br/>
-        <span><a href="https://goo.gl/wGteKA" target="_blank">Kopli 1, 50115 Tartu</a></span><br/>
+    <div class="col-md-2 footer-block">
+        <p class="footer-title">Kontakt</p>
+        <a class="footer-text" href="mailto:info@voco.ee">info@voco.ee</a><br/>
+        <a class="footer-text" href="tel:+3727361866">7 361 866</a><br/>
     </div>
-    <div class="col-md-3 footer-block">
-        <span>Kontakt</span></br>
-        <span>E-post: <a href="mailto:info@voco.ee">info@voco.ee</a> </span><br/>
-        <span>Telefon: <a href="tel:+3727361866">7 361 866</a></span><br/>
+    <div class="col-md-2 footer-block">
+        <p class="footer-title">VOCO</p>
+        <a class="footer-text" href="https://goo.gl/wGteKA" target="_blank">Kopli 1</a><br/>
+        <a class="footer-text" href="https://goo.gl/wGteKA" target="_blank">Tartu 50115 Eesti</a><br/>
     </div>
-    <div class="col-md-3 footer-block">
-        <a href="https://www.facebook.com/tartuvoco/" target="_blank">
-            <img id="fb-logo" src="images/fb_logo.png" alt="fb-logo">
-        </a>
+    <div class="col-md-2 footer-block">
+        <p class="footer-title">Privaatsustingimused</p>
+        <a class="footer-text" href="https://voco.ee/andmekaitse-info/">Andmekaitse</a><br/>
+        <a class="footer-text" href="https://voco.ee/kupsised/">Küpsised</a><br/>
     </div>
 </footer>
 </body>

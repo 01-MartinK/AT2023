@@ -25,9 +25,6 @@
                 </div>
                 <textarea wrap="hard" name="validateHTML" id="code" class="validateHTML" cols="20"></textarea>
                 <br>
-                <input type="hidden" value="Submit">
-                <a href="#" id="submit-practical" class="btn btn-info btn-lg" data-toggle="modal"
-                   data-target=".confirm">Esita</a>
                 <br>
             </form>
         </div>
@@ -36,8 +33,16 @@
                 <div class="preview-div"><h2 class="preview-heading center">Eelvaade:</h2></div>
             </div>
             <iframe id="preview"></iframe>
+            
+            <input type="hidden" value="Submit">
+                <a href="#" id="submit-practical" class="btn btn-info btn-lg" data-toggle="modal"
+                   data-target=".confirm">Esita</a>
         </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
 
     <script>
 

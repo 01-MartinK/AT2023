@@ -1,8 +1,10 @@
-<div class="bordered-box">
+<div>
     <h1 id="score">Sa said teoreetilise testi eest
-        <mark class="orange"><?= $points; ?></mark>
+        <mark><?= $points; ?></mark>
         punkti.
     </h1>
+    <br />
+    <br />
     <p class="finish-p">Kokku saadakse punkte teoreetilise ja praktilise testi ning vestlusvooru eest! Praktilise
         testi tulemused saadakse teada hiljem. Automaatne suunamine avalehele toimub <span id="counter">15</span>
         sekundi pärast.

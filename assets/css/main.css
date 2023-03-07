@@ -1,7 +1,13 @@
 /* import fonts */
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 /* font for front page text*/
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap);
+
+:root {
+    --black: #000000;
+    --grey: #F5F7FA;
+    --red: #FF0000;
+}
 
 html {
     height: 100%;
@@ -12,20 +18,35 @@ body {
     margin: 0;
     min-height: 100%;
     padding-bottom: 120px;
-    background-color: #eeeeee;
-    font-family: Lato;
+    background-color: #ffffff;
+    font-family: Montserrat, sans-serif;
 }
 
 .welcome-text {
-    box-shadow: 5px 5px 3px lightgrey;
     background-color: #fff;
     margin: 0 auto;
-    max-width: 1000px;
-    margin-top: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+footer {
+    background: black;
+    font-weight: bold;
+    opacity: 1;
 }
 
 .welcome-text > p {
     text-align: center !important;
+    font-weight: 500;
+}
+
+p a {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #58606e;
 }
 
 #btnLogin {
@@ -64,29 +85,36 @@ html {
 
 /************ FOOTER AND HEADER *********************/
 /* header */
-.container-fluid {
-    border-bottom: solid 3.5px #5498cb;
+
+.navbar {
+    height: 100px;
+    background-color: var(--black);
+    border-radius: 0;
+    margin: auto;
 }
 
-#khk-logo {
-    height: 55px;
-    margin-top: 5px;
-    padding-bottom: 5px;
+.navbar-info {
+    color: #fff;
+}
+
+.container-fluid {
+    margin: auto;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+#voco-logo {
+    width: 100%;
+    height: auto;
 }
 
 /* header end */
 
 /* footer */
-#fb-logo {
-    height: 50px;
-}
-
-#fb-logo:hover {
-    opacity: 0.70;
-}
-
 .footer-block {
-    text-align: center;
+    text-align: left;
     padding: 10px 0px 10px 0px;
 }
 
@@ -95,12 +123,29 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    border-top: solid 2px #5498cb;
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .modal-footer {
     display: block !important;
     margin: auto !important;
+}
+
+#footer-logo {
+    height: 45px;
+}
+
+.footer-title {
+    color: white !important;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+.footer-text {
+    color: white;
+    margin-bottom: 5px;
 }
 
 @media (min-width: 10px) and (max-width: 1000px) {
@@ -118,25 +163,35 @@ footer {
 /************ TEST PAGE *********************************/
 
 .quiz-title {
-    text-shadow: 4px 4px 6px lightblue;
+    color: black !important;
+    font-size: x-large;
 }
 
 .question-box {
     border: solid 1px #fff;
-    background-color: #fff;
-    box-shadow: 5px 5px 3px lightgrey;
+    background-color: rgb(245, 247, 250);
+    box-shadow: 0px 0px 8px lightgray;
     max-width: 700px;
     margin: auto;
     margin-top: 2%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #submit-quiz {
-    width: 130px;
+    width: 150px;
     display: block;
     margin: auto;
     margin-top: 40px;
     padding: 7px;
+    border-radius: 2px;
+    border: none;
+    background-color: black;
+    color: white;
     font-size: 22px;
+}
+
+#submit-quiz:hover {
+    background-color: #58606e;
 }
 
 .active-answer {
@@ -145,6 +200,7 @@ footer {
 
 .question-box h2 {
     text-align: center;
+    font-size: x-large;
 }
 
 .question-box ul {
@@ -164,7 +220,7 @@ footer {
     position: relative;
     max-width: 600px;
     min-height: 60px;
-    background: #d90;
+    background: black;
     border-radius: 1.5em;
 }
 
@@ -175,7 +231,7 @@ footer {
 }
 
 .question-box ul li:hover {
-    background: #ddc03a;
+    background: #58606e;
 }
 
 .question-box ul li input[type=radio] {
@@ -191,6 +247,7 @@ footer {
     font-size: 22px;
     padding: 14px 25px 25px 60px;
     margin: 10px auto;
+    font-weight: bolder;
     height: 60px;
     z-index: 9;
     cursor: pointer;
@@ -202,6 +259,7 @@ footer {
     position: absolute;
     border: 2px solid #fff;
     border-radius: 100%;
+    background-color: #fff;
     height: 25px;
     width: 25px;
     top: 19px;
@@ -211,34 +269,18 @@ footer {
     -webkit-transition: border .25s linear;
 }
 
-.question-box ul li:hover .check {
-    border: 5px solid #7db1b2;
-}
-
-.question-box ul li .check::before {
-    display: block;
-    margin: auto;
-    position: absolute;
-    content: '';
-    border-radius: 100%;
-    height: 10px;
-    width: 10px;
-    top: 2.5px;
-    left: 2.5px;
-    transition: background 0.25s linear;
-    -webkit-transition: background 0.25s linear;
-}
 
 input[type=radio]:checked ~ .check {
-    border: 5px solid #7db1b2;
+    border: 5px solid white;
+    background-color: black;
 }
 
 input[type=radio]:checked ~ .check::before {
-    background: #7db1b2;
+    background: red;
 }
 
 input[type=radio]:checked ~ label {
-    color: #7db1b2;
+    color: cadetblue;
 }
 
 .modal-title {
@@ -266,15 +308,14 @@ input[type=radio]:checked ~ label {
     text-align: center;
     padding-top: 1%;
     margin-top: -4%;
-    color: #5498cb;
+    color: black;
+    font-weight: bold;
 
 }
 
 #practical-questions article {
-    border: solid 1px #fff;
     background-color: #fff;
     margin-top: 2%;
-    box-shadow: 5px 5px 3px lightgrey;
     margin-bottom: 2%;
 }
 
@@ -287,15 +328,24 @@ input[type=radio]:checked ~ label {
     margin: auto;
     padding: 1%;
     margin-top: 1%;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 2px;
     text-align: left;
 }
 
-#target {
-    background-color: #d90;
-    box-shadow: 5px 5px 3px lightgrey;
+.row {
+    background-color: black;
+    padding-bottom: 4em;
+}
 
+#practical-questions ul li:first-child {
+    text-align: center;
+    width: 75%;
+    margin-bottom: 3em;
+}
+
+#target {
+    background-color: black;
 }
 
 #submit-practical {
@@ -330,14 +380,13 @@ input[type=radio]:checked ~ label {
 }
 
 .preview-heading {
-    background-color: #d90;
+    background-color: black;
     color: white;
     display: block;
     margin: auto;
     padding-bottom: 50px;
     padding-top: 30px;
     height: 60px;
-    box-shadow: 5px 5px 3px lightgrey;
 }
 
 .preview-div {
@@ -350,6 +399,11 @@ input[type=radio]:checked ~ label {
 
 #submit-view {
     width: 130px;
+    background-color: black;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    font-weight: bold;
     display: block;
     margin: auto;
     margin-top: 40px;
@@ -357,13 +411,16 @@ input[type=radio]:checked ~ label {
     font-size: 22px;
 }
 
+#submit-view:hover {
+    background-color: #58606e;
+}
+
 #result-iframe {
     display: block;
     margin: auto;
     width: 75%;
     height: 500px;
-    background-color: white;
-    box-shadow: 5px 5px 3px lightgrey;
+    background-color: #f5f7fa;
 }
 
 #iframe-container {
@@ -375,7 +432,6 @@ input[type=radio]:checked ~ label {
     height: 500px;
     border: 1px solid black;
     background-color: white;
-    box-shadow: 5px 5px 3px lightgrey;
 }
 
 .CodeMirror {
@@ -425,11 +481,11 @@ mark.orange {
 /********** TO DO ***************/
 /* container */
 .container p {
-    text-align: justify;
-    padding: 20px 20px 20px 20px;
+    text-align: center;
+    padding: 5px 20px 5px 20px;
     display: block;
     font-size: 20px;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 .container h1 {
@@ -595,6 +651,50 @@ input:-webkit-autofill, input:focus:-webkit-autofill, input:hover:-webkit-autofi
     text-align: left;
     background-color: #5498cb;
     color: white;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 0;
+    padding: 2em;
+    width: 48em;
+}
+
+.modal-content .modal-title {
+    color: black;
+}
+
+.modal-content .modal-footer {
+    display: flex !important;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.modal-content .modal-header {
+    border: none;
+}
+
+.modal-content .modal-btn {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    width: 4em;
+    border: none;
+    border-radius: 2px;
+}
+
+.modal-content .modal-btn:hover {
+    background-color: #666;
+}
+
+#score {
+    color: black;
+}
+
+.finish-p {
+    color: black;
 }
 
 /************ PUBLIC SCORE END *********************/

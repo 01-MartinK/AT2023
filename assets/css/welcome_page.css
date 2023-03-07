@@ -1,35 +1,41 @@
 /************** CUSTOM CSS FOR WELCOME PAGE **********/
 body {
-    background: url("../../images/bg.jpg");
-    background-size: cover;
-    background-position: center center;
+    background-color: #fff;
     padding-bottom: 120px;
 }
 
 #welcome-large {
-    color: #286090 !important;
+    color: var(--black) !important;
+    font-weight: 600;
+    font-size: 28px;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
-@media (min-width: 10px) and (max-width: 1200px) {
+.text-low-m {
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
 
-    body {
-        background-size: auto;
-    }
+#welcome-small {
+    color: var(--black) !important;
+    font-size: 26px;
 }
 
 .footer-block {
     background: black;
 }
 
-footer {
-    background: black;
-    font-weight: bold;
-    opacity: 0.9;
-}
+
 
 footer a {
     color: white;
 }
+
+footer span {
+    text-align: left;
+}
+
 
 span {
     color: white;
@@ -38,15 +44,15 @@ span {
 #start {
     background: black;
     color: white;
-    font-size: 19px;
-    border-radius: 5%;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    border: none;
 }
 
 #start:hover {
-    background: rgba(255, 165, 0, 1);
-    border: 1px solid white;
-    color: white;
-    font-size: 19px;
+    background: #333840;
 }
 
 .navbar {
@@ -58,9 +64,7 @@ span {
     margin-bottom: 0;
 }
 
-.welcome-text {
-    box-shadow: 5px 5px 3px rgba(235, 235, 235, 0.6);
-}
+
 
 /**** FOOTER FIX FOR WELCOME PAGE *********/
 @media (min-width: 625px) and (max-width: 1000px) {

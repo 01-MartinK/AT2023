@@ -40,6 +40,7 @@ body {
 }
 
 .footer-block {
+    color: white;
     text-align: center;
     padding: 10px 0px 10px 0px;
 }
@@ -51,6 +52,7 @@ footer {
     right: 0;
     margin-bottom: -57px;
     background: black;
+    color: white !important;
 }
 
 .modal-footer {

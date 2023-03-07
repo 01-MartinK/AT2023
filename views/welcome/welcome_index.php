@@ -4,21 +4,25 @@
     <p>
         Tere tulemast Tartu Kutsehariduskeskuse noorem tarkvaraarendaja ja veebispetsialisti eriala
         sisseastumiskatsetele!
+    </p>
+    <p>
         Sind ootavad ees valikvastustega teoreetiline test ja praktiline test HTMLi ja CSSi kohta. Teoreetiline test
         sisaldab
         10 küsimust, kus igal küsimusel on ainult üks õige vastus. Praktilises ülesandes tuleb lähtuvalt ülesande sisust
         kirjutada koodi kasutades HTMLi ja CSSi elemente. Testi lõpus näed oma tulemust ning saad suunduda
         ingliskeelsele
         vestlusele.
-        <?php if ($this->settings['scores'] == 1): ?>
-            Testi lõpptulemusi saate näha <a href="scores/" target="_blank">siit.</a>
-        <?php endif; ?>
     </p>
+    
 </div>
 <div class="center">
-    <a id="start" href="#" class="btn btn-info btn-lg" data-toggle="modal"
-       data-target="#login-modal">Registreeri testile</a>
+    <button id="start" data-toggle="modal" data-target="#login-modal">Registreeri testile</button>
 </div>
+<p class="text-low-m">
+    <?php if ($this->settings['scores'] == 1): ?>
+        Testi lõpptulemusi saate näha <a href="scores/" target="_blank">siit.</a>
+    <?php endif; ?>
+</p>
 
 <!-- LOG IN MODAL -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog"
