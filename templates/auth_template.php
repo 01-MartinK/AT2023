@@ -125,11 +125,11 @@ ___________              __           ____  __.___ ___  ____  __.
         <span><a href="https://goo.gl/wGteKA" target="_blank">Kopli 1, 50115 Tartu</a></span><br/>
     </div>
     <div class="col-md-4 footer-block">
-        <span>E-post: <a href="mailto:info@khk.ee">info@khk.ee</a> </span><br/>
+        <span>E-post: <a href="mailto:info@voco.ee">info@voco.ee</a> </span><br/>
         <span>Telefon: <a href="tel:+3727361866">7 361 866</a></span><br/>
     </div>
     <div class="col-md-4 footer-block">
-        <a href="http://www.facebook.com/kutseharidus" target="_blank">
+        <a href="https://www.facebook.com/tartuvoco/" target="_blank">
             <img id="fb-logo" src="images/fb_logo.png" alt="fb-logo">
         </a>
     </div>

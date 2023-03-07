@@ -5,6 +5,14 @@ use Aastategija\Questions;
 class welcome extends Controller
 {
 
+    function debug_to_console($data) {
+        $output = $data;
+        if (is_array($output))
+            $output = implode(',', $output);
+
+        echo "<script>console.log('Debug Objects: " . $output . " ')";
+    }
+
     // does not require a logged in user
     public $requires_auth = false;
 
@@ -25,7 +33,6 @@ class welcome extends Controller
 
         // get the users from database
         $this->users = get_all("SELECT * FROM users");
-
     }
 
 
@@ -54,7 +61,7 @@ class welcome extends Controller
                 'lastname' => $_POST['lastName'],
                 'social_id' => $_POST['social_id']
             ]);
-
+        
         // in case the user already exists
         if ($user_id === false) {
             $social_id = addslashes($_POST['social_id']);

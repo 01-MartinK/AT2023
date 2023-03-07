@@ -18,20 +18,28 @@ body {
 }
 
 .footer-block {
-    background: white;
+    background: black;
 }
 
 footer {
-    background: white;
+    background: black;
     font-weight: bold;
     opacity: 0.9;
 }
 
+footer a {
+    color: white;
+}
+
+span {
+    color: white;
+}
+
 #start {
-    background: rgba(255, 165, 0, 0.8);
-    border: 1px solid white;
+    background: black;
     color: white;
     font-size: 19px;
+    border-radius: 5%;
 }
 
 #start:hover {
