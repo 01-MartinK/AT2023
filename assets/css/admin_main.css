@@ -17,7 +17,7 @@ html, body {
 }
 
 body {
-    padding-top: 50px;
+    padding-top: 240px;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -30,34 +30,73 @@ body {
     border-bottom: 1px solid lightblue;
 }
 
+/*************** NAVBAR ****************/
+
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--black);
+    border-radius: 0;
+    margin: auto;
+    background-color: black;
+}
+
+.navbar-info {
+    color: #fff;
+}
+
+.navbar-content {
+    margin: auto;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+#voco-logo {
+    width: 100%;
+    height: auto;
+}
+
+
 /*************** FOOTER ****************/
-#fb-logo {
-    height: 50px;
-}
-
-#fb-logo:hover {
-    opacity: 0.70;
-}
-
 .footer-block {
-    color: white;
-    text-align: center;
-    padding: 10px 0px 10px 0px;
+    text-align: left;
+    padding: 10px 0px 10px 0px; 
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: fixed;
     right: 0;
-    margin-bottom: -57px;
-    background: black;
-    color: white !important;
+    bottom: 0;
+    background-color: black;
+    left: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .modal-footer {
     display: block !important;
     margin: auto !important;
+}
+
+#footer-logo {
+    height: 45px;
+}
+
+.footer-title {
+    color: white !important;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+.footer-text {
+    color: white;
+    margin-bottom: 5px;
 }
 
 @media (min-width: 10px) and (max-width: 1000px) {
@@ -124,7 +163,10 @@ html {
 
 /************** LOGIN PAGE ****************/
 .form-signin {
-    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    max-width: 380px;
     padding: 15px;
     margin: 0 auto;
 }
@@ -132,6 +174,9 @@ html {
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
     margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 2em;
+    font-weight: bold;
 }
 
 .form-signin .checkbox {
@@ -139,13 +184,27 @@ html {
 }
 
 .form-signin .form-control {
+    box-shadow: none;
+    border: none;
     position: relative;
     font-size: 16px;
     height: auto;
-    padding: 10px;
+    padding: 14px;
+    background-color: #d9d9d9;
+    border-radius: 16px !important;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.form-signin .admin-login-submit {
+    margin: 0 auto;
+    width: 16em;
+    height: 3em;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
 }
 
 .form-signin .form-control:focus {

@@ -5,26 +5,25 @@
         <div class="question-box">
             <h2><?= $question['question'] ?></h2>
             <ul>
+                <!-- Generate questions list -->
                 <?php foreach ($question['answers'] as $answer): ?>
                     <li>
                         <input type="radio" id="<?= $answer['id'] ?>" name="answers[<?= $question['question_id'] ?>]"
                                value="<?= $answer['id'] ?>">
                         <label for="<?= $answer['id'] ?>"><?= $answer['text'] ?></label>
-
-                        <div class="check">
-                            <div class="inside"></div>
-                        </div>
                     </li>
                 <?php endforeach ?>
             </ul>
         </div>
     <?php endforeach ?>
-    <a href="#" id="submit-quiz" class="btn btn-info btn-lg"
+    <!-- End php foreach functionality -->
+    <a href="#" id="submit-quiz" class="btn btn-lg"
        data-toggle="modal" data-target=".confirm">
         Esita
     </a>
 </form>
 
+<!-- Divider -->
 <br />
 <br />
 <br />

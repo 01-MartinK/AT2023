@@ -1,5 +1,7 @@
 <!-- import custom markup JS -->
 <script src="assets/js/codemirror.js"></script>
+<img class="voco-muster-2" alt="voco muster 2" src="images/voco_muster_RGB-02.png" />
+<img class="voco-muster-7" alt="voco muster 7" src="images/voco_muster_RGB-07.png" />
 <div id="practical-questions">
     <article>
         <h2 class="toDo">Lahenda järgmised ülesanded:</h2>
@@ -17,11 +19,12 @@
 </div>
 
 <?php if ($this->settings['livehtml'] == 1): ?>
-    <div class="row">
+
+    <div class="practical row">
         <div class="col-md-6">
             <form action="test/result" method="post" id="target">
                 <div class="practical-div">
-                    <mark class="practical-heading center">Koodi kirjutamine:</mark>
+                    <h2 class="practical-heading center">Koodi kirjutamine:</h2>
                 </div>
                 <textarea wrap="hard" name="validateHTML" id="code" class="validateHTML" cols="20"></textarea>
                 <br>
@@ -30,19 +33,23 @@
         </div>
         <div class="col-md-6">
             <div class="center">
-                <div class="preview-div"><h2 class="preview-heading center">Eelvaade:</h2></div>
+                <div class="practical-div">
+                    <h2 class="practical-heading center">Eelvaade:</h2>
+                </div>
             </div>
             <iframe id="preview"></iframe>
-            
-            <input type="hidden" value="Submit">
-                <a href="#" id="submit-practical" class="btn btn-info btn-lg" data-toggle="modal"
-                   data-target=".confirm">Esita</a>
         </div>
     </div>
+    <div class="practical row">
+        <input type="hidden" value="Submit">
+            <a href="#" id="submit-practical" class="btn btn-lg" data-toggle="modal"
+                data-target=".confirm">Esita</a>
+    </div>
+
     <br />
-    <br />
-    <br />
-    <br />
+  
+
+ 
 
     <script>
 

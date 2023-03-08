@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="<?= BASE_URL ?>">
     <title>Sisseastumine</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <link href="vendor/components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/codemirror.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
@@ -42,20 +42,19 @@ ___________              __           ____  __.___ ___  ____  __.
                \/                            \/     \/         \/
 ###################################################################### -->
 
-<nav class="navbar">
-    <div class="container-fluid">
+<nav class="nav-bar">
+    <div class="navbar-content">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
+        <div class="navbar-logo">
             <a href="http://voco.ee/" target="_blank"><img id="voco-logo" src="https://voco.ee/wp-content/uploads/VOCO-Logo.svg" alt="logo"/></a>
         </div>
-        <div class="">
+        <div class="navbar-info">
             <?php if (isset($_SESSION['user_id'])): ?>
                 <h4 class="navbar-info"><?= $_SESSION['name'] . ', ' . $_SESSION['social_id'] ?></h4>
             <?php endif; ?>
         </div>
     </div>
 </nav>
-
 
 <div class="container">
     <!-- Main component for a primary marketing message or call to action -->

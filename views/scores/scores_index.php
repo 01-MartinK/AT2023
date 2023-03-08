@@ -2,8 +2,8 @@
 
 <div id="public-results">
     <h3><?= __("Tulemused") ?></h3>
-    <div class="table-box">
-        <table class="table table-bordered results">
+    <div class="">
+        <table class="table results">
             <tr>
                 <th>Nimi</th>
                 <th>Teoreetiline test</th>
@@ -34,6 +34,7 @@
             <?php endforeach ?>
         </table>
     </div>
+    <p>Tulemused vaatatud soovite tagasi minna <a href="" target="">siit.</a></p>
 
     <?php else: ?>
 

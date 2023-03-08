@@ -7,6 +7,7 @@
     --black: #000000;
     --grey: #F5F7FA;
     --red: #FF0000;
+    font-family: Montserrat, sans-serif !important;
 }
 
 html {
@@ -19,11 +20,10 @@ body {
     min-height: 100%;
     padding-bottom: 120px;
     background-color: #ffffff;
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, sans-serif !important;
 }
 
 .welcome-text {
-    background-color: #fff;
     margin: 0 auto;
     max-width: 900px;
     margin: 30px auto;
@@ -54,11 +54,12 @@ a:hover {
     border: none;
     background: black;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     display: block;
     margin: auto;
     margin-top: 10px;
-    padding: 1em;
+    font-size: 20px;
+    padding: 10px;
 }
 
 #btnLogin:hover {
@@ -176,6 +177,7 @@ footer {
 .quiz-title {
     color: black !important;
     font-size: x-large;
+    font-weight: 600;
 }
 
 .question-box {
@@ -188,16 +190,16 @@ footer {
 }
 
 #submit-quiz {
-    width: 150px;
+    width: 120px;
     display: block;
     margin: auto;
     margin-top: 40px;
-    padding: 7px;
     border-radius: 2px;
     border: none;
     background-color: black;
     color: white;
     font-size: 22px;
+    font-weight: 600;
 }
 
 #submit-quiz:hover {
@@ -225,13 +227,13 @@ footer {
 .question-box ul li {
     display: flex;
     align-items: center;
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     gap: 1em;
     margin: auto;
     margin-top: 3%;
     color: #fff;
     max-width: 600px;
-    height: 60px;
+    height: auto;
     background: black;
     border-radius: 1.5em;
 }
@@ -247,7 +249,10 @@ footer {
 }
 
 .question-box ul li label {
-    
+    font-size: large;
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
 }
 
 .question-box ul li input[type=radio] {
@@ -259,9 +264,24 @@ footer {
     background-color: white;
 }
 
+.question-box .active-answer input[type=radio]::before {
+    border: 16px solid white;
+    animation-name: none;
+}
+
+@keyframes scaleRadio {
+    0% {border: 10px solid white;}
+    50% {border: 3px solid white;}
+    100% {border: 5px solid white;}
+  }
+
 .question-box .active-answer input[type=radio] {
     background-color: black;
     border: 5px solid white;
+    animation-name: scaleRadio;
+    animation-duration: 0.15s;
+    animation-play-state: normal;
+    animation-timing-function: ease-in-out;
 }
 
 .modal-title {
@@ -295,7 +315,6 @@ footer {
 }
 
 #practical-questions article {
-    background-color: #fff;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -312,7 +331,6 @@ footer {
     font-size: 16px;
     text-align: left;
 }
-
 
 .row {
     padding-bottom: 4em;
@@ -350,7 +368,8 @@ footer {
     margin-bottom: 21px;
     padding-top: 22px;
     height: 60px;
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 700;
 }
 
 .practical-div {
@@ -370,6 +389,27 @@ footer {
     margin-top: 60px;
 }
 
+.voco-muster-2 {
+    display: block;
+    position: absolute;
+    width: 100em;
+    left: 0;
+    transform: translate(-920px, -80px);
+    z-index: -1;
+}
+
+.voco-muster-7 {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: 82em;
+    object-fit: cover;
+    object-position: 0px;
+    right: 0;
+    transform: translate( 200px, -20px);
+    z-index: -1;
+}
+
 /************ PRACTICAL PAGE END *************************/
 
 /************ PRACTICAL RESULT VIEW PAGE ******************/
@@ -384,7 +424,6 @@ footer {
     display: block;
     margin: auto;
     margin-top: 40px;
-    padding: 7px;
     font-size: 22px;
 }
 
@@ -477,7 +516,7 @@ mark.orange {
     padding-bottom: 3%;
     /*background-color: grey;*/
     padding-top: 3%;
-    color: #5498cb;
+    color: black;
     width: 100%;
 }
 
@@ -486,7 +525,7 @@ mark.orange {
     padding-top: 1%;
     /*background-color: grey;*/
     margin-top: -4%;
-    color: #5498cb;
+    color: black;
     width: 100%;
 }
 
@@ -495,7 +534,7 @@ mark.orange {
     padding-top: 1%;
     /*background-color: grey;*/
     margin-top: -4%;
-    color: #5498cb;
+    color: black;
     width: 100%;
 }
 
@@ -508,7 +547,7 @@ mark.orange {
     padding-top: 1%;
     /*background-color: grey;*/
     margin-top: -4%;
-    color: #5498cb;
+    color: black;
     width: 100%;
 }
 
@@ -536,13 +575,11 @@ mark.orange {
     border-radius: 2px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    font-family: roboto;
 }
 
 .loginmodal-container h1 {
     text-align: center;
     font-size: 1.8em;
-    font-family: roboto;
     color: black;
     font-weight: 800;
 }
@@ -564,7 +601,6 @@ mark.orange {
     -webkit-appearance: none;
     background: #b9b9b9;
     border: none;
-    /* border-radius: 2px; */
     padding: 1.5em;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -581,13 +617,9 @@ mark.orange {
 .loginmodal {
     text-align: center;
     font-size: 14px;
-    font-family: 'Arial', sans-serif;
     font-weight: 700;
     height: 36px;
     padding: 0 8px;
-    /* border-radius: 3px; */
-    /* -webkit-user-select: none;
-      user-select: none; */
 }
 
 .loginmodal-container a {
@@ -666,7 +698,7 @@ table tbody tr th {
 .modal-content .modal-btn {
     background-color: black;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     width: 4em;
     border: none;
     border-radius: 2px;
