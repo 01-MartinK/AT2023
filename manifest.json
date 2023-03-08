@@ -1,0 +1,14 @@
+{
+    "name": "Voco Tarkvara Arendaja Sisseastumise Katse",
+    "short_name": "Voco IT Katse",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "Voco Tarkvara Arendaja Testimise leht, noortele tarkvara arendajatele",
+    "icons": [
+        {
+          "src": "images/favicon.ico",
+          "sizes": "150x150",
+          "type": "image/ico"
+        }
+      ]
+}

@@ -9,6 +9,7 @@
     <link href="vendor/components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/codemirror.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json" />
     <?php if (isset($welcome)): ?>
         <link href="assets/css/welcome_page.css" rel="stylesheet">
     <?php endif; ?>
