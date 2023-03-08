@@ -34,20 +34,6 @@ ___________              __           ____  __.___ ___  ____  __.
                \/                            \/     \/         \/
 ###################################################################### -->
 
-<nav class="nav-bar">
-    <div class="navbar-content">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-logo">
-            <a href="http://voco.ee/" target="_blank"><img id="voco-logo" src="https://voco.ee/wp-content/uploads/VOCO-Logo.svg" alt="logo"/></a>
-        </div>
-        <div class="navbar-info">
-            <?php if (isset($_SESSION['user_id'])): ?>
-                <h4 class="navbar-info"><?= $_SESSION['name'] . ', ' . $_SESSION['social_id'] ?></h4>
-            <?php endif; ?>
-        </div>
-    </div>
-</nav>
-
 <?php if (isset($auth->is_admin) && $auth->is_admin): ?>
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top navbar-admin">
@@ -101,23 +87,13 @@ ___________              __           ____  __.___ ___  ____  __.
                     </div>
                 <?php endforeach;
             } ?>
-
-
-
             <div class="input-group">
                 <input id="username" name="username" type="text" class="form-control" placeholder="Kasutajanimi" autofocus>
             </div>
-
-            <br/>
-
-
             <div class="input-group">
                 <input id="password" name="password" type="password" class="form-control" placeholder="Parool">
             </div>
-
-            <br/>
-
-            <button id="btnLogin" class="admin-login-submit"
+            <button id="btnLogin" class="admin-login-submit btn"
                     type="submit"><?= __('Logi sisse') ?></button>
 
         </form>
@@ -129,26 +105,7 @@ ___________              __           ____  __.___ ___  ____  __.
 
 </div>
 <!-- /container -->
-<footer>
-    <div class="col-md-2 footer-block">
-        <a class="footer-text" href="https://voco.ee"><img id="footer-logo" src="images/VOCO.svg" alt="logo"/></a>
-    </div>
-    <div class="col-md-2 footer-block">
-        <p class="footer-title">Kontakt</p>
-        <a class="footer-text" href="mailto:info@voco.ee">info@voco.ee</a><br/>
-        <a class="footer-text" href="tel:+3727361866">7 361 866</a><br/>
-    </div>
-    <div class="col-md-2 footer-block">
-        <p class="footer-title">VOCO</p>
-        <a class="footer-text" href="https://goo.gl/wGteKA" target="_blank">Kopli 1</a><br/>
-        <a class="footer-text" href="https://goo.gl/wGteKA" target="_blank">Tartu 50115 Eesti</a><br/>
-    </div>
-    <div class="col-md-2 footer-block">
-        <p class="footer-title">Privaatsustingimused</p>
-        <a class="footer-text" href="https://voco.ee/andmekaitse-info/">Andmekaitse</a><br/>
-        <a class="footer-text" href="https://voco.ee/kupsised/">Küpsised</a><br/>
-    </div>
-</footer>
+
 
 <script>
     // admin login

@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap);
+
 @font-face {
-    font-family: 'Open Sans';
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: 400;
     src: local('Open Sans'), local('OpenSans'), url('opensans.woff2') format('woff2');
@@ -19,7 +21,7 @@ html, body {
 body {
     padding-top: 240px;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .responsive {
@@ -198,13 +200,13 @@ html {
 }
 
 .form-signin .admin-login-submit {
-    margin: 0 auto;
-    width: 16em;
-    height: 3em;
+    margin: 20px auto;
     border: none;
+    padding: 0.5em 1em;
     background-color: black;
     color: white;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .form-signin .form-control:focus {
