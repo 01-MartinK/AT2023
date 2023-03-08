@@ -6,7 +6,7 @@
 <h3 id="welcome-small">Sisseastumiskatsed</h3>
 <div class="welcome-text">
     <p>
-        Tere tulemast Tartu Kutsehariduskeskuse noorem tarkvaraarendaja ja veebispetsialisti eriala
+        Tere tulemast Tartu Rakenduslik Kolledži noorem tarkvaraarendaja ja veebispetsialisti eriala
         sisseastumiskatsetele!
     </p>
     <p>

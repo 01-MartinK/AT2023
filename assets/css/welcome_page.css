@@ -100,6 +100,10 @@ span {
 
 @media (min-width: 482px) and (max-width: 625px) {
 
+    .voco-muster-3, .voco-muster-5 {
+        display: none;
+    }
+
     footer {
         position: absolute;
         bottom: 0;
@@ -110,6 +114,10 @@ span {
 }
 
 @media (min-width: 10px) and (max-width: 482px) {
+
+    .voco-muster-3, .voco-muster-5 {
+        display: none;
+    }
 
     footer {
         display: block;

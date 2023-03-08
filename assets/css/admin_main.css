@@ -128,6 +128,10 @@ html {
     box-shadow: 2px 1px 1px lightgrey;
 }
 
+.logout-btn {
+    background-color: red;
+}
+
 .logout {
     display: block;
     float: right;
@@ -139,7 +143,9 @@ html {
 }
 
 .navbar-admin {
-    background: #194f72;
+    background: black;
+    height: 3em;
+    border: none;
     /*font-size: 18px;*/
 }
 
@@ -157,7 +163,7 @@ html {
 }
 
 .navbar-nav > .active > a {
-    background: #fcf7cc !important;
+    background: white !important;
     color: grey !important;
 }
 
@@ -282,7 +288,7 @@ form.form-signin {
 #pushToLog {
     width: 130px;
     border-radius: 6px;
-    background-color: #5bc0de;
+    background-color: #5498cb;
     border-color: #5bc0de;
     color: white;
     font-size: 18px;
